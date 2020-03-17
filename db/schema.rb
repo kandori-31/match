@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20200316094530) do
     t.string   "name",                                              null: false
     t.string   "gender",                                            null: false
     t.text     "introduction",           limit: 65535
+    t.string   "image"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
