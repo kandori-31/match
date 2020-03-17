@@ -23,3 +23,29 @@
     }
   }
 }
+.contents{
+  display: flex;
+  flex-wrap: wrap;
+}
+.user{
+  // background-color: red;
+  padding: 10px 40px 0 0;
+  width:200px;
+  height: 280px;
+  .icon-image {
+    width: 200px;
+    height: 200px;
+    //サイズ指定
+    border-radius: 100px;
+    //画像を丸くする
+    object-fit: cover;
+    //タテヨコ比を変えないままトリミング
+  }
+  .user__name{
+    font-size: 25px;
+    color:#99ffff;
+    padding-left: 3px;
+    padding-top:10px;
+  }
+  
+}

@@ -9,6 +9,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :name,               null:false
       t.string :gender,            null:false
       t.text :introduction
+      t.string :image
 
 
       ## Recoverable
