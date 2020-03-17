@@ -1,55 +1,15 @@
 .contents
-  .user
-    .user__image
-      =image_tag(current_user.image, class:"icon-image")
-    .user__name　かきくけお
-  .user
-    .user__image
-      =image_tag(current_user.image, class:"icon-image")
-    .user__name　かきくけお
-  .user
-    .user__image
-      =image_tag(current_user.image, class:"icon-image")
-    .user__name　かきくけお
-  .user
-    .user__image
-      =image_tag(current_user.image, class:"icon-image")
-    .user__name　かきくけこ
-      
-  .user
-    .user__image
-      =image_tag(current_user.image, class:"icon-image")
-    .user__name　かきくけお
-  .user
-    .user__image
-      =image_tag(current_user.image, class:"icon-image")
-    .user__name　かきくけお
-  .user
-    .user__image
-      =image_tag(current_user.image, class:"icon-image")
-    .user__name　かきくけお
-  .user
-    .user__image
-      =image_tag(current_user.image, class:"icon-image")
-    .user__name　かきくけお
-  .user
-    .user__image
-      =image_tag(current_user.image, class:"icon-image")
-    .user__name　かきくけお
-  .user
-    .user__image
-      =image_tag(current_user.image, class:"icon-image")
-    .user__name　かきくけお
-  .user
-    .user__image
-      =image_tag(current_user.image, class:"icon-image")
-    .user__name　かきくけお
-  .user
-    .user__image
-      =image_tag(current_user.image, class:"icon-image")
-    .user__name　かきくけお
-  .user
-    .user__image
-      =image_tag(current_user.image, class:"icon-image")
-    .user__name　かきくけお
+  - @users.each do |user|
+    - if user.image.present? 
+      .user
+        .user__image
+          =image_tag(user.image, class:"icon-image")
+        .user__name
+          =user.name
+    -else
+      .user
+        .user__image
+          =image_tag("名無し.png", class:"icon-image")
+        .user__name
+          =user.name
   
