@@ -1,4 +1,6 @@
 .header{
+  display: flex;
+  justify-content: space-between;
   width:100%;
   height:80px;
   background-color: #99ffff;
@@ -8,7 +10,28 @@
 	transparent 75%, transparent),
 	linear-gradient(-45deg, rgba(56, 142, 60, 0.5) 25%, transparent 25%,
 	transparent 50%, rgba(56, 142, 60, 0.5) 50%, rgba(56, 142, 60, 0.5) 75%,
-	transparent 75%, transparent);
+  transparent 75%, transparent);
+  
+  &__logo{
+    display: flex;
+    line-height: 80px;
+    &__app{
+      font-size: 45px;
+    }
+    &__image{
+      padding-top: 20px;
+      padding-left: 15px;
+      .icon-image {
+        width: 50px;
+        height: 50px;
+        //サイズ指定
+        border-radius: 25px;
+        //画像を丸くする
+        object-fit: cover;
+        //タテヨコ比を変えないままトリミング
+      }
+    }
+  }
 
   &__list{
     display: flex;

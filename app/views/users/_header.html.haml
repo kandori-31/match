@@ -1,5 +1,10 @@
 %header
   .header
+    .header__logo
+      .header__logo__app MatchApp
+      .header__logo__image
+        =image_tag(current_user.image, class:"icon-image")
+
     %ul.header__list
       %li
         =link_to "いいね"
