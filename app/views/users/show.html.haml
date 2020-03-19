@@ -1,0 +1,27 @@
+.wrapper
+= render "header"
+.show-user
+  -if @user.image.present?
+    .show-user__image
+      =image_tag @user.image, class: "icon-image"
+    .show-user__name
+      =@user.name
+    .show-user__introduction
+      =@user.introduction
+    = render 'follow',{relationship: @relationship}
+    - if current_user.following?(@user) && current_user.follower?(@user)
+      = link_to "メッセージ"
+          
+  - else
+    .show-user__image
+      =image_tag("名無し.png", class:"icon-image")
+    .show-user__name
+      =@user.name
+    .show-user__introduction
+      =@user.introduction
+    = render 'follow',{relationship: @relationship}
+    - if current_user.following?(@user) && current_user.follower?(@user)
+      = link_to "メッセージ"
+
+
+    
