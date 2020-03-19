@@ -17,6 +17,10 @@
     line-height: 80px;
     &__app{
       font-size: 45px;
+      a{
+        text-decoration: none;
+        color: black;
+      }
     }
     &__image{
       padding-top: 20px;
@@ -69,6 +73,10 @@
     color:#99ffff;
     padding-left: 3px;
     padding-top:10px;
+    a{
+      text-decoration: none;
+      color:#99ffff;
+    }
   }
   
 }

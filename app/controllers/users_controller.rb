@@ -3,7 +3,15 @@ class UsersController < ApplicationController
     @users=User.all
   end
 
+  def indeex
+    @users=current_user.followers
+  end
   def edit
+  end
+
+  def show
+    @user = User.find(params[:id])
+    @relationship = Relationship.new
   end
 
   def update

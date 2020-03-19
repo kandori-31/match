@@ -1,5 +1,7 @@
+.wrapper
+= render "header"
 .contents
-  - @users.each do |user|
+  - current_user.followers.each do |user|
     -if current_user.gender != user.gender && user.image.present?
       .user
         .user__image
@@ -12,3 +14,4 @@
           =image_tag("名無し.png", class:"icon-image")
         .user__name
           =link_to user.name,"/users/#{user.id}", method: :get
+

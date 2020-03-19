@@ -1,0 +1,24 @@
+.show-user{
+  text-align:center;
+  padding-top:100px;
+  &__image{
+    .icon-image {
+      width: 350px;
+      height: 350px;
+      //サイズ指定
+      border-radius: 175px;
+      //画像を丸くする
+      object-fit: cover;
+      //タテヨコ比を変えないままトリミング
+    }
+  }
+  &__name{
+    font-size:40px;
+    color:#99ffff;
+  }
+  &__introduction{
+    font-size: 30px;
+    color:red;
+  }
+  
+}
