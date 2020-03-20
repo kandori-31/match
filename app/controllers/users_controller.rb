@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     @users=User.all
   end
 
-  def indeex
+  def follower
     @users=current_user.followers
   end
   def edit
@@ -12,7 +12,25 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @relationship = Relationship.new
+    @currentUserEntry = GroupUser.where(user_id: current_user.id)
+    @userEntry = GroupUser.where(user_id: @user.id
+    )
+    unless @user.id == current_user.id
+    @currentUserEntry.each do |cu|
+      @userEntry.each do |u|
+        if cu.group_id == u.group_id 
+          @isGroup = true
+          @groupId = cu.group_id
+    end
   end
+end
+
+      unless @isGroup
+        @group =Group.new
+        @group_user = GroupUser.new
+    end
+  end
+end
 
   def update
     if current_user.update(user_params)

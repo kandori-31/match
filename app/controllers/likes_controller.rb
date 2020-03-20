@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
   def index
-    @users = User.all
+    @users = current_user.matcher
   end
 end

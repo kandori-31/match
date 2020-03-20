@@ -1,0 +1,18 @@
+.wrappaer
+= render "users/header"
+.contents
+  .message
+    - @entries.each do |e|
+      .message__name
+        =image_tag e.user.image, class:"message__name__image"
+        =e.user.name
+        
+
+  
+        
+    
+.form
+  = form_for @message do |f|
+    = f.text_field :content, placeholder: "type a message"
+    = f.hidden_field :group_id, value: @group.id
+    = f.submit "送信",class: "form__submit"
