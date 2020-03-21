@@ -18,8 +18,8 @@ class User < ApplicationRecord
     self.followers.include?(other_user)
   end 
 
-  def matching?(other_user)
-    following?(other_user) && follower?(other_user)
+  def matcher
+    followings & followers
   end
 
 
@@ -29,6 +29,9 @@ class User < ApplicationRecord
   has_many :followings, through: :relationships, source: :follow
   has_many :reverse_of_relationships, class_name: 'Relationship', foreign_key: 'follow_id'
   has_many :followers, through: :reverse_of_relationships, source: :user
+
+  has_many :group_users
+  has_many :groups, through: :group_users
 
   mount_uploader :image, ImageUploader
 end

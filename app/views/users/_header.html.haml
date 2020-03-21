@@ -4,11 +4,16 @@
       .header__logo__app 
         =link_to "MatchApp", root_path
       .header__logo__image
-        =image_tag(current_user.image, class:"icon-image")
+        -if current_user.image.present?
+          =link_to image_tag(current_user.image, class:"icon-image"),"/users/#{current_user.id}", method: :get
+        -else
+          =link_to image_tag("名無し.png",class:"icon-image"),"/users/#{current_user.id}",method: :get
+
+        
 
     %ul.header__list
       %li
-        =link_to "お相手から", inddex_path
+        =link_to "お相手から", follower_path
       %li
         =link_to "マッチ", likes_path
       %li

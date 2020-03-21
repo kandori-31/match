@@ -11,7 +11,8 @@
 	linear-gradient(-45deg, rgba(56, 142, 60, 0.5) 25%, transparent 25%,
 	transparent 50%, rgba(56, 142, 60, 0.5) 50%, rgba(56, 142, 60, 0.5) 75%,
   transparent 75%, transparent);
-  
+  position: fixed;
+  z-index: 1;
   &__logo{
     display: flex;
     line-height: 80px;
@@ -53,6 +54,7 @@
 .contents{
   display: flex;
   flex-wrap: wrap;
+  padding-top:80px;
 }
 .user{
   // background-color: red;

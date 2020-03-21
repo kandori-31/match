@@ -10,7 +10,16 @@
       =@user.introduction
     = render 'follow',{relationship: @relationship}
     - if current_user.following?(@user) && current_user.follower?(@user)
-      = link_to "メッセージ"
+      - if @isGroup == true
+        %p.user-show-group
+          = link_to "メッセージへ" ,group_path(@groupId)
+      -else 
+        = form_for @group do |f|
+          =fields_for @group_user do |g|
+            =g.hidden_field :user_id, value: @user.id
+          = f.submit "メッセージルーム作成"
+
+
           
   - else
     .show-user__image
@@ -21,7 +30,12 @@
       =@user.introduction
     = render 'follow',{relationship: @relationship}
     - if current_user.following?(@user) && current_user.follower?(@user)
-      = link_to "メッセージ"
-
-
+      - if @isGroup == true
+        %p.user-show-group
+          = link_to "メッセージへ" ,group_path(@groupId)
+      -else 
+        = form_for @group do |f|
+          =fields_for @group_user do |g|
+            =g.hidden_field :user_id, value: @user.id
+          = f.submit "メッセージルーム作成"
     
