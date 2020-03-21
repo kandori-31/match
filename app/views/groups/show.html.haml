@@ -1,18 +1,25 @@
 .wrappaer
-= render "users/header"
-.contents
-  .message
-    - @entries.each do |e|
-      .message__name
-        =image_tag e.user.image, class:"message__name__image"
-        =e.user.name
-        
-
-  
-        
-    
-.form
-  = form_for @message do |f|
-    = f.text_field :content, placeholder: "type a message"
+  = render "users/header"
+  .line-bc
+    - @messages.each do |m|     
+      - if current_user.id != m.user_id
+        .balloon6
+          .faceicon
+            -if m.user.image.present?
+              =image_tag(m.user.image)
+            - else
+              =image_tag("名無し.png")
+                
+          .chatting
+            .says
+              %p 
+                =m.content
+      - elsif current_user.id == m.user_id
+        .mycomment
+          %p
+            =m.content 
+= form_for @message do |f|
+  .form
+    = f.text_field :content, placeholder: "type a message",class:"form__text"
     = f.hidden_field :group_id, value: @group.id
     = f.submit "送信",class: "form__submit"
