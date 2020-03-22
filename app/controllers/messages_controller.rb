@@ -5,7 +5,10 @@ class MessagesController < ApplicationController
     if GroupUser.where(user_id: current_user.id, group_id: params[:message][:group_id]).present?
       @message = Message.create(message_params)
     end
-    redirect_to group_path(@message.group_id)
+    respond_to do |format|
+      format.html{ redirect_to group_path(@message.group_id)}
+      format.json
+    end
 end
 
   private
