@@ -1,15 +1,19 @@
 .account-page {
+  background-image: url("https://cdn.pixabay.com/photo/2015/09/24/17/04/couple-955926_1280.jpg");
+  background-size: cover;
+  height:100vh;
+  position: relative;
   .account-page__inner {
-    width: 980px;
-    margin: 60px auto;
+    position: absolute;
+    right:30px;
+    width: 350px;
+    margin: 0 30px ;
     padding: 60px;
     background-color: #fff;
-    border: 1px solid #ddd;
     border-radius: 5px;
+    transform: scale(0.7,0.7);
 
     .account-page__inner--left, .account-page__inner--right {
-      float: left;
-      width: 50%;
     }
     &:after {
       clear: both;

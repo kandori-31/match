@@ -5,11 +5,11 @@
 - if current_user.following?(@user) && current_user.follower?(@user)
   - if @isGroup == true
     %p.user-show-group
-      = link_to "メッセージへ" ,group_path(@groupId)
+      = link_to "メッセージへ" ,group_path(@groupId),class:"room"
   -else 
     = form_for @group do |f|
       =fields_for @group_user do |g|
         =g.hidden_field :user_id, value: @user.id
-      = f.submit "メッセージルーム作成"
+      = f.submit "メッセージルーム作成",class:"room"
 
 

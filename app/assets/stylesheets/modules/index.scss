@@ -16,6 +16,8 @@
   &__logo{
     display: flex;
     line-height: 80px;
+    padding-left: 10px;
+    font-family: cursive;
     &__app{
       font-size: 45px;
       a{
@@ -72,12 +74,12 @@
   }
   .user__name{
     font-size: 25px;
-    color:#99ffff;
+    color:#7fffd4;
     padding-left: 3px;
     padding-top:10px;
     a{
       text-decoration: none;
-      color:#99ffff;
+      color:#7fffd4;
     }
   }
   
