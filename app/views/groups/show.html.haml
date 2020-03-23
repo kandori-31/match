@@ -3,7 +3,7 @@
   .line-bc
     - @messages.each do |m|     
       - if current_user.id != m.user_id
-        .balloon6
+        .balloon6{data: {message: {id: m.id}}}
           .faceicon
             -if m.user.image.present?
               =image_tag(m.user.image)
@@ -15,7 +15,7 @@
               %p 
                 =m.content
       - elsif current_user.id == m.user_id
-        .mycomment
+        .mycomment{data: {message: {id: m.id}}}
           %p
             =m.content 
 = form_for @message do |f|
