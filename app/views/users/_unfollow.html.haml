@@ -1,0 +1,15 @@
+= form_for(current_user.relationships.find_by(follow_id: @user.id), html: { method: :delete }) do |f|
+  = f.hidden_field :follow_id, value: @user.id
+  = f.submit 'いいね中', class: 'follow-now'
+
+- if current_user.following?(@user) && current_user.follower?(@user)
+  - if @isGroup == true
+    %p.user-show-group
+      = link_to "メッセージへ" ,group_path(@groupId)
+  -else 
+    = form_for @group do |f|
+      =fields_for @group_user do |g|
+        =g.hidden_field :user_id, value: @user.id
+      = f.submit "メッセージルーム作成"
+
+
