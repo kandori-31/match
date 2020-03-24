@@ -1,4 +1,8 @@
 #account-page.account-page
+  .hidden_image
+    = image_tag("No1@2x.png")
+    ＊1 目指してます
+  .hidden_btn
   .account-page__inner.clearfix
     .account-page__inner--left.account-page__header
       %h2 Log in
@@ -19,3 +23,4 @@
               = f.password_field :password, autocomplete: "off"
           .actions
             = f.submit "Log in", class: 'btn'
+            
