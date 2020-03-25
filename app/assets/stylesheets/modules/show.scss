@@ -5,6 +5,7 @@
   height: 100vh;
   &__image{
     .icon-image {
+      
       width: 350px;
       height: 350px;
       //サイズ指定
@@ -52,6 +53,11 @@
 
     text-decoration: none;
   }
+}
+
+#cvs{
+  width:100%;
+  height:calc(100vh - 80px);
 }
 
 .line-bc {
@@ -172,3 +178,9 @@
 
 
 
+.circle{
+  width:80px;
+  height:80px;
+  background-color: red;
+  border-radius: 50%;
+}

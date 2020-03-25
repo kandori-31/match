@@ -1,0 +1,69 @@
+#wrap{
+  // background:url("https://cdn.pixabay.com/photo/2016/01/08/16/53/flame-1128636_1280.jpg");
+  background-size: cover;
+  opacity: 0.8;
+  position: relative;
+
+  width: 100%;
+  height:100vh;
+  display: flex;
+  position:relative;
+
+
+}
+
+#lr{
+  position: absolute;
+
+  /* 要素の大きさ 分割数によって調整が必要 */
+  width: 50%;
+  height: 100vh;
+
+  /* 画像 */
+  background-image: url("https://cdn.pixabay.com/photo/2016/01/08/16/53/flame-1128636_1280.jpg");
+  
+
+  /* 画像の配置位置 ボーターを含めた位置 */
+  background-origin: border-box;
+
+  /* 画像の大きさをbox-wrapの大きさに合わせる */
+  background-size: 100% 200%;
+
+  box-sizing: border-box;
+}
+
+#left-bg{
+  // background:url("https://cdn.pixabay.com/photo/2016/01/08/16/53/flame-1128636_1280.jpg");
+  // height:100vh;
+  // width: 50%;
+  // position: absolute;
+  left:-50%;
+   /* 画像の配置位置 ボーターを含めた位置 */
+  //  background-origin: border-box;
+
+   /* 画像の大きさをbox-wrapの大きさに合わせる */
+  //  background-size: 100% 200%;
+
+  //  box-sizing: border-box;
+  background-position: left;
+
+
+}
+
+#right-bg{
+  // background:url("https://cdn.pixabay.com/photo/2016/01/08/16/53/flame-1128636_1280.jpg");
+  // height:100vh;
+  // width: 50%;
+  // position: absolute;
+  right:-50%;
+   /* 画像の配置位置 ボーターを含めた位置 */
+  //  background-origin: border-box;
+
+   /* 画像の大きさをbox-wrapの大きさに合わせる */
+  //  background-size: 100% 200%;
+
+  //  box-sizing: border-box;
+  background-position: right;
+
+}
+

@@ -1,38 +1,38 @@
 .wrapper
-= render "header"
-.show-user
-  -if @user.image.present?
-    .show-user__image
-      =image_tag @user.image, class: "icon-image"
-    .show-user__name
-      =@user.name
-    .show-user__introduction
-      =@user.introduction
-    - unless current_user == @user
-      - if current_user.following?(@user)
-        .show-user__btn
-          = render 'unfollow',{relationship: @relationship}
-      - else
-        .show-user__btn
-          = render 'follow',{relationship: @relationship}
+  = render "header"
+  .show-user
+    -if @user.image.present?
+      .show-user__image
+        =image_tag @user.image, class: "icon-image"
+      .show-user__name
+        =@user.name
+      .show-user__introduction
+        =@user.introduction
+      - unless current_user == @user
+        - if current_user.following?(@user)
+          .show-user__btn
+            = render 'unfollow',{relationship: @relationship}
+        - else
+          .show-user__btn
+            = render 'follow',{relationship: @relationship}
 
 
 
-          
-  - else
-    .show-user__image
-      =image_tag("名無し.png", class:"icon-image")
-    .show-user__name
-      =@user.name
-    .show-user__introduction
-      =@user.introduction
-    - unless current_user == @user
-      - if current_user.following?(@user)
-        .show-user__btn
-          = render 'unfollow',{relationship: @relationship}
-      - else
-        .show-user__btn
-          = render 'follow',{relationship: @relationship}
+            
+    - else
+      .show-user__image
+        =image_tag("名無し.png", class:"icon-image")
+      .show-user__name
+        =@user.name
+      .show-user__introduction
+        =@user.introduction
+      - unless current_user == @user
+        - if current_user.following?(@user)
+          .show-user__btn
+            = render 'unfollow',{relationship: @relationship}
+        - else
+          .show-user__btn
+            = render 'follow',{relationship: @relationship}
 
 
-  
+    
