@@ -4,7 +4,6 @@ $(function () {
       left: left,
       top: right,
       radius: { 0: 300 },
-      repeat: 999,
       count: count,
       children: {
         shape: 'circle',
@@ -12,7 +11,8 @@ $(function () {
         fill: [col1, col2, col3],
         strokeWidth: 500,
         duration: duration,
-        delay: 1200
+        delay: 1200,
+        repeat: 999
       }
     }).replay();
   }
@@ -22,7 +22,6 @@ $(function () {
     const burst = new mojs.Burst({
       left: left,
       top: right,
-      repeat: 999,
       radius: { 0: 200 },
       count: count,
       children: {
@@ -31,7 +30,8 @@ $(function () {
         fill: [col1, col2, col3],
         strokeWidth: 300,
         duration: duration,
-        delay: 2000
+        delay: 2000,
+        repeat: 999
       }
     }).replay();
   }
@@ -74,7 +74,7 @@ $(function () {
 
     setTimeout(function () {
       burstEffect();
-    }, 3000);
+    }, 2000);
 
   }
 
@@ -191,6 +191,7 @@ $(function () {
     burst(830, 330, 3000, 'red', '#d0894b', 'white', 11);
 
 
+
     //delay
     backBurst(650, 330, 1700, '#fcfbe0', 'gold', 'white', 8);
     backBurst(650, 390, 1700, 'red', '#fcfbe0', 'white', 8);
@@ -253,6 +254,7 @@ $(function () {
         $('body').html("");
         $('body').html(buildHTML(data));
         matchingEffect(animateWreath, christmasMessage, startBurst, snowEffect);
+
         setTimeout(doReload, 13000);
 
 

@@ -3,44 +3,45 @@
     = image_tag("No1@2x.png")
     ＊1 目指してます
   .hidden_btn
-  .account-page__inner.clearfix
-    .account-page__inner--left.account-page__header
-      %h2 アカウント登録
-      %h5 新規アカウントの登録
-      = render "devise/shared/links"
-    .account-page__inner--right.user-form
-      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-        = devise_error_messages!
-        .field
-          .field-label
-            = f.label :name
-          .field-input
-            = f.text_field :name, autofocus: true
-          
-        .field
-          .field-label
-            = f.label :email
-          .field-input
-            = f.email_field :email
-          .field-select
-            = f.radio_button :gender, :male
-            = f.label :gender, "男性", {value: :male, style: "display: inline-block;"}
-            = f.radio_button :gender, :female
-            = f.label :gender, "女性", {value: :female, style: "display: inline-block;"}
-          .field-image
-          プロフィール画像：
-          = f.file_field :image
+  .box
+    .clearfix.registrations
+      .account-page__inner--left.account-page__header
+        %h2 アカウント登録
+        %h5 新規アカウントの登録
+        = render "devise/shared/links"
+      .account-page__inner--right.user-form
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = devise_error_messages!
+          .field
+            .field-label
+              = f.label :name
+            .field-input
+              = f.text_field :name, autofocus: true
+            
+          .field
+            .field-label
+              = f.label :email
+            .field-input
+              = f.email_field :email
+            .field-select
+              = f.radio_button :gender, :male
+              = f.label :gender, "男性", {value: :male, style: "display: inline-block;"}
+              = f.radio_button :gender, :female
+              = f.label :gender, "女性", {value: :female, style: "display: inline-block;"}
+            .field-image
+            プロフィール画像：
+            = f.file_field :image
 
-        .field
-          .field-label
-            = f.label :password
-            %i (英数字8文字以上)
-          .field-input
-            = f.password_field :password, autocomplete: "off"
-        .field
-          .field-label
-            = f.label :password_confirmation
-          .field-input
-            = f.password_field :password_confirmation, autocomplete: "off"
-        .actions
-          = f.submit "アカウント登録", class: 'btn'
+          .field
+            .field-label
+              = f.label :password
+              %i (英数字8文字以上)
+            .field-input
+              = f.password_field :password, autocomplete: "off"
+          .field
+            .field-label
+              = f.label :password_confirmation
+            .field-input
+              = f.password_field :password_confirmation, autocomplete: "off"
+          .actions
+            = f.submit "アカウント登録", class: 'btn'

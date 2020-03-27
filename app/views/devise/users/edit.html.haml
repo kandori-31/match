@@ -21,5 +21,10 @@
             = f.label :email
           .field-input
             = f.email_field :email
+        .field
+          .field-label
+            = f.label :introduction
+          .field-input.introduction 
+            = f.text_field :introduction,
         .actions
           = f.submit "Update", class: 'btn'
