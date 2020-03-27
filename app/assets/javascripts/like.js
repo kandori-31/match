@@ -223,7 +223,7 @@ $(function () {
   function doReload() {
     window.location.reload();
   }
-  $('#new_relationship').on('submit', function (e) {
+  $('#follow').on('submit', function (e) {
     e.preventDefault()
     var formData = new FormData(this);
     var url = $(this).attr('action');

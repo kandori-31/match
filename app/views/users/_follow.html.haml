@@ -1,8 +1,8 @@
 - if current_user.follower?(@user)
-      = form_for(current_user.relationships.build) do |f|
+      = form_for(current_user.relationships.build,html: {id: 'follow'}) do |f|
             = f.hidden_field :follow_id, value: @user.id
             = f.hidden_field :user_id, value: current_user.id
-            = f.submit 'いいね!', class: 'follows', id:'follow'
+            = f.submit 'いいね!', class: 'follows'
 -else
       = form_for(current_user.relationships.build) do |f|
             = f.hidden_field :follow_id, value: @user.id
