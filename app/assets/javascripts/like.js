@@ -79,28 +79,64 @@ $(function () {
   }
 
   function buildHTML(data) {
-    var html = `
+    console.log(data)
+    if (data.image) {
+      var html = `
   <div id="wrap">
   <div id="left-bg">
-  <img id="left-avatar" class="user_avatar" >
+  <img id="left-avatar" class="user_avatar"src=${data.cu_image}>
   <div id="left_name" class="user_name">
+  ${data.cu_name}
+  
+
+  </div >
+  </div >
+    <div id="right-bg">
+      <img id="right-avatar" class="user_avatar" src=${data.image}>
+        <br>
+          <div id="right_name" class="user_name">
+          ${data.name}
+          </div>
+  </div>
+        <img id="wreath" src="">
   </div>
   </div>
-  <div id="right-bg">
-  <img id="right-avatar" class="user_avatar" >
-  <br>
-  <div id="right_name" class="user_name">
-  </div>
-  </div>
-  <img id="wreath" src="">
-  </div>
-  </div>
-  <div id="christmas_message" class="ef">
-  Merry Christmas
+      <div id="christmas_message" class="ef">
+        matching
+
   </div>
   `
 
-    return html
+      return html
+    }
+    else {
+      var html = `
+  <div id="wrap">
+  <div id="left-bg">
+  <img id="left-avatar" class="user_avatar"src=${data.cu_image}>
+  <div id="left_name" class="user_name">
+  ${data.cu_name}
+  
+
+  </div >
+  </div >
+    <div id="right-bg">
+      <img id="right-avatar" class="user_avatar" src="https://lh3.googleusercontent.com/proxy/GliKELLnoWMjSZpD2XHnsxL2v0jEtMVJX3PG-M1nvmSztSqdmKb-RXuPAMgupB3phiZ9V48lWCGeCdYzSaQ6mj_h2oTyRUCq9_sfTEQ6HeDk43xGS5w0e_b7904RNOE8ZcrPMefSWIXE8BM6iTewiK9-pUkQyVOry6DMt5Nxnw">
+        <br>
+          <div id="right_name" class="user_name">
+          ${data.name}
+          </div>
+  </div>
+        <img id="wreath" src="">
+  </div>
+  </div>
+      <div id="christmas_message" class="ef">
+        matching
+
+  </div>
+  `
+      return html
+    }
   }
 
   var christmasMessage = function () {
@@ -174,14 +210,17 @@ $(function () {
 
   var snowEffect = function () {
     $(document).snowfall({
-      minSize: 1,    // 雪の最小サイズ
-      maxSize: 10,    // 雪の最大サイズ
+      minSize: 4,    // 雪の最小サイズ
+      maxSize: 15,    // 雪の最大サイズ
       minSpeed: 1,    // 雪の最低速度
       maxSpeed: 5,    // 雪の最高速度
       round: true, // 雪の形を丸くする
       shadow: true, // 雪に影をつける
       flakeColor: "pink", // 雪の色を指定
     });
+  }
+  function doReload() {
+    window.location.reload();
   }
   $('#new_relationship').on('submit', function (e) {
     e.preventDefault()
@@ -212,8 +251,12 @@ $(function () {
         //   }
         // }).play();
         $('body').html("");
-        $('body').html(buildHTML);
+        $('body').html(buildHTML(data));
         matchingEffect(animateWreath, christmasMessage, startBurst, snowEffect);
+        setTimeout(doReload, 13000);
+
+
+
 
 
 

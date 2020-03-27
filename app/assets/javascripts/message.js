@@ -26,6 +26,9 @@ $(function () {
         $('.form__text').val('');
         $('.form__submit').prop('disabled', false);
         $('.line-bc').animate({ scrollTop: $('.line-bc')[0].scrollHeight });
+        for (let value of formData.entries()) {
+          console.log(value);
+        }
 
       })
       .fail(function () {
