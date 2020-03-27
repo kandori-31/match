@@ -1,41 +1,38 @@
 .wrapper
-= render "header"
-.show-user
-  -if @user.image.present?
-    .show-user__image
-      =image_tag @user.image, class: "icon-image"
-    .show-user__name
-      =@user.name
-    .show-user__introduction
-      =@user.introduction
-    = render 'follow',{relationship: @relationship}
-    - if current_user.following?(@user) && current_user.follower?(@user)
-      - if @isGroup == true
-        %p.user-show-group
-          = link_to "メッセージへ" ,group_path(@groupId)
-      -else 
-        = form_for @group do |f|
-          =fields_for @group_user do |g|
-            =g.hidden_field :user_id, value: @user.id
-          = f.submit "メッセージルーム作成"
+  = render "header"
+  .show-user
+    -if @user.image.present?
+      .show-user__image
+        =image_tag @user.image, class: "icon-image"
+      .show-user__name
+        =@user.name
+      .show-user__introduction
+        =@user.introduction
+      - unless current_user == @user
+        - if current_user.following?(@user)
+          .show-user__btn
+            = render 'unfollow',{relationship: @relationship}
+        - else
+          .show-user__btn
+            = render 'follow',{relationship: @relationship}
 
 
-          
-  - else
-    .show-user__image
-      =image_tag("名無し.png", class:"icon-image")
-    .show-user__name
-      =@user.name
-    .show-user__introduction
-      =@user.introduction
-    = render 'follow',{relationship: @relationship}
-    - if current_user.following?(@user) && current_user.follower?(@user)
-      - if @isGroup == true
-        %p.user-show-group
-          = link_to "メッセージへ" ,group_path(@groupId)
-      -else 
-        = form_for @group do |f|
-          =fields_for @group_user do |g|
-            =g.hidden_field :user_id, value: @user.id
-          = f.submit "メッセージルーム作成"
+
+            
+    - else
+      .show-user__image
+        =image_tag("名無し.png", class:"icon-image")
+      .show-user__name
+        =@user.name
+      .show-user__introduction
+        =@user.introduction
+      - unless current_user == @user
+        - if current_user.following?(@user)
+          .show-user__btn
+            = render 'unfollow',{relationship: @relationship}
+        - else
+          .show-user__btn
+            = render 'follow',{relationship: @relationship}
+
+
     
