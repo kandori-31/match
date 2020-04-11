@@ -1,11 +1,10 @@
 class GroupsController < ApplicationController
-  
+  # チャットルームの作成、変更するかも
   def create
     @group = Group.create
     @entry1 = GroupUser.create(group_id: @group.id, user_id: current_user.id)
     @entry2 = GroupUser.create(group_params)
       redirect_to group_path(@group.id)
-  
   end
   def show 
     @group = Group.find(params[:id])

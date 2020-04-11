@@ -3,6 +3,7 @@
   padding-top:100px;
   height: 100vh;
   background: radial-gradient(#eeffff, white);
+  
 
   &__image{
     .icon-image {
@@ -63,34 +64,7 @@
   border-bottom: none;
 }
 
-// .follows{
-//   transform: scale(2,2);
-//   margin-top: 20px;
-//   background:linear-gradient(#FF3300,#FF0000);
-//   border-radius: 20px;
-//   padding: 5px 7px;
-//   cursor: pointer;
-// }
-// .follow-now{
-//   transform: scale(2,2);
-//   margin-top: 20px;
-//   background-color: #FF8C00	;
-//   border-radius: 3px;
-//   padding-top: 5px;
-//   cursor: pointer;
-//   margin-bottom:30px;
-// }
-
-// .room{
-//   border: 1px solid #FF8C00 ;
-//   color:black;
-//   font-size: 20px;
-//   padding:8px;
-//   a{
-
-//     text-decoration: none;
-//   }
-// }
+// メッセージ一覧へ移行するボタン
 .btn-default {
   position: relative;
   display: inline-block;
@@ -141,11 +115,8 @@
 .deg_btn:hover {
   background: #2c3148;
 }
-#cvs{
-  width:100%;
-  height:calc(100vh - 80px);
-}
 
+// 自分の命名規則に合わせる
 .line-bc {
   padding: 80px 0px 0 0 ;
   width: 100%;
@@ -262,13 +233,4 @@
     
   
 }
-}
-
-
-
-.circle{
-  width:80px;
-  height:80px;
-  background-color: red;
-  border-radius: 50%;
 }
