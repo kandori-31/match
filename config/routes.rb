@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :likes, only: [:index]
   resources :messages, only: [:index, :create]
   resources :groups, only: [:create, :show] do 
-
+    #namespaceを用いることでmessagesコントローラーを分けている
     namespace :api do
       resources :messages, only: :index, defaults: {format:'json'}
     end

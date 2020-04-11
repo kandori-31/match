@@ -35,7 +35,7 @@ $(function () {
       }
     }).replay();
   }
-
+  // 左右から弾ませている
   var matchingEffect = function (wreaseEffect, textEffect, burstEffect, snowEffect) {
     var leftContent = document.getElementById('left-bg');
     new mojs.Tween({
@@ -44,7 +44,7 @@ $(function () {
       speed: 0.3,
       onUpdate: function (progress) {
         var bounceProgress = mojs.easing.bounce.out(progress);
-        leftContent.style.transform = 'translateX(' + 720 * bounceProgress + 'px)';
+        leftContent.style.transform = 'translateX(' + 100 * bounceProgress + '%)';
       }
     }).play();
 
@@ -55,7 +55,7 @@ $(function () {
       speed: 0.3,
       onUpdate: function (progress) {
         var bounceProgress = mojs.easing.bounce.out(progress);
-        rightContent.style.transform = 'translateX(' + -720 * bounceProgress + 'px)';
+        rightContent.style.transform = 'translateX(' + -100 * bounceProgress + '%)';
       }
     }).play();
 
@@ -79,7 +79,6 @@ $(function () {
   }
 
   function buildHTML(data) {
-    console.log(data)
     if (data.image) {
       var html = `
   <div id="wrap">
@@ -138,7 +137,7 @@ $(function () {
       return html
     }
   }
-
+  // matchingmessageに変更
   var christmasMessage = function () {
 
     $('#christmas_message').css('opacity', '1');
@@ -204,7 +203,7 @@ $(function () {
 
   }
 
-
+  // 花が回る
   var animateWreath = function () {
     $('#wreath').animate({ opacity: '1' }, 3000);
   }
@@ -220,9 +219,11 @@ $(function () {
       flakeColor: "pink", // 雪の色を指定
     });
   }
+  // ページをリロードする
   function doReload() {
     window.location.reload();
   }
+  // いいねフォームで情報を送信した際にajaxで情報を送信
   $('#follow').on('submit', function (e) {
     e.preventDefault()
     var formData = new FormData(this);
@@ -237,31 +238,10 @@ $(function () {
       contentType: false
     })
       .done(function (data) {
-        // $('.show-user').html(`<div class="circle"></div>`)
-        // $('.show-user').empty();
-        // $('.show-user').html(`<div class="show-user__image"><%= image_tag user.image></div>`)
-        // var circle = document.querySelector('.show-user__image');
-
-        // new mojs.Tween({
-        //   repeat: 999,
-        //   delay: 500,
-        //   speed: 0.3,
-        //   onUpdate: function (progress) {
-        //     var bounceProgress = mojs.easing.bounce.out(progress);
-        //     circle.style.transform = 'translateY(' + 400 * bounceProgress + 'px)';
-        //   }
-        // }).play();
         $('body').html("");
         $('body').html(buildHTML(data));
         matchingEffect(animateWreath, christmasMessage, startBurst, snowEffect);
-
         setTimeout(doReload, 13000);
-
-
-
-
-
-
       })
       .fail(function () {
         window.alert('テキストを入力するか、画像ファイルを選んでください。');

@@ -9,8 +9,6 @@
         -else
           =link_to image_tag("名無し.png",class:"icon-image"),"/users/#{current_user.id}",method: :get
 
-        
-
     %ul.header__list
       %li
         =link_to "お相手から", follower_path
@@ -20,4 +18,3 @@
         =link_to "編集", edit_user_path(current_user) 
       %li
         =link_to "ログアウト",destroy_user_session_path, method: :delete
-
