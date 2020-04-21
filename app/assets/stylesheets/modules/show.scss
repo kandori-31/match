@@ -7,7 +7,6 @@
 
   &__image{
     .icon-image {
-      
       width: 350px;
       height: 350px;
       //サイズ指定
@@ -123,7 +122,8 @@
   // margin: 15px auto;
   text-align: right;
   font-size: 14px;
-  background: #7da4cd;
+  // background: #7da4cd;
+  background: #8eb8ff;
   height: calc( 100vh - 180px);
   overflow: scroll;
 }
@@ -143,7 +143,7 @@
 
 .balloon6 .faceicon img{
   width: 100%;
-  height: auto;
+  height: 80px;
   border-radius: 50%;
 }
 .balloon6 .chatting {
