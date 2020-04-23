@@ -34,17 +34,21 @@ $ rails s
 http://localhost:3000
 
 ## DEMO
+### トップページ
 ![トップページ](https://user-images.githubusercontent.com/61687923/80054082-5c93e000-8559-11ea-83e6-4cdc3ae09831.png)
 <br>
   トップページには自分と性別の違う相手の一覧が表示されます
-<br>
+
+### 詳細ページ
 ![詳細ページ](https://user-images.githubusercontent.com/61687923/80054235-9f55b800-8559-11ea-9d65-332e2890995f.png)
 <br>
   ユーザーの詳細ページです
   <br>
   このページでいいねをすることができ、マッチングした際にはメッセージに飛ぶことができます
   <br>
-  [![マッチング演出](https://i.gyazo.com/00fcc28ec9ef522115e6c5e6567d70e0.gif)](https://gyazo.com/00fcc28ec9ef522115e6c5e6567d70e0)
+
+### マッチング演出
+[![Image from Gyazo](https://i.gyazo.com/00fcc28ec9ef522115e6c5e6567d70e0.gif)](https://gyazo.com/00fcc28ec9ef522115e6c5e6567d70e0)
 <br>
   mo.jsのburstで花火をあげ、boundで要素を弾ませています
 
