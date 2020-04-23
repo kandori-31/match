@@ -61,4 +61,5 @@ gem 'mini_magick'
 gem 'jquery-rails'
 group :production do
   gem 'pg'
+  gem 'fog-aws'
 end
