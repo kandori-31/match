@@ -4,34 +4,48 @@
 ## アプリの説明
 ### 簡易的なマッチングアプリです
 気にいった相手をいいねすることができます
+<br>
 また、いいねした際に相手からもいいねされているとマッチング演出が起こります
+<br>
 そして、マッチングした相手とはメッセージのやりとりを行うことができます
 
 ## 工夫したポイント
 javascriptのライブラリであるmo.jsを用いてマッチングの際の演出を豪華にしました
 
 ## 制作背景
-スクールのカリキュラムで学習していない技術を用いてアプリを制作したかったからです
+葉変更　スクールのカリキュラムで学習していない技術を用いてアプリを制作したかったからです
 
 ## 本番環境
 
 
 ## 環境構築
 git clone https://github.com/kandori-31/match.git
+<br>
 $ cd match
+<br>
 $ bundle install
+<br>
 $ rails db:create
+<br>
 $ rails db:migrate
+<br>
 $ rails s
+<br>
 http://localhost:3000
 
 ## DEMO
-![トップページ](https://gyazo.com/9caa30cf78e1821775eaf1ce8b3e92b5)
+![トップページ](https://user-images.githubusercontent.com/61687923/80054082-5c93e000-8559-11ea-83e6-4cdc3ae09831.png)
+<br>
   トップページには自分と性別の違う相手の一覧が表示されます
-![詳細ページ](https://gyazo.com/11392cbddcdfe07059c516f7046e601c)
+<br>
+![詳細ページ](https://user-images.githubusercontent.com/61687923/80054235-9f55b800-8559-11ea-9d65-332e2890995f.png)
+<br>
   ユーザーの詳細ページです
+  <br>
   このページでいいねをすることができ、マッチングした際にはメッセージに飛ぶことができます
-![マッチング演出](https://gyazo.com/00fcc28ec9ef522115e6c5e6567d70e0)
+  <br>
+  [![マッチング演出](https://i.gyazo.com/00fcc28ec9ef522115e6c5e6567d70e0.gif)](https://gyazo.com/00fcc28ec9ef522115e6c5e6567d70e0)
+<br>
   mo.jsのburstで花火をあげ、boundで要素を弾ませています
 
 ## 使用技術
@@ -39,9 +53,13 @@ http://localhost:3000
 
 ## 課題や今後実装したい機能
   メッセージ一覧
+  <br>
   検索機能
+  <br>
   より詳細なユーザー情報
+  <br>
   自身と似ているユーザーを優先的に一覧に表示する
+  <br>
   並べ替え
 
 ## DB設計
