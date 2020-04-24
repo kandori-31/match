@@ -112,7 +112,7 @@ $(function () {
   </div >
   </div >
     <div id="right-bg">
-      <img id="right-avatar" class="user_avatar" src="images/名無し.png">
+      <img id="right-avatar" class="user_avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTPPu0YnJGrR3WihWauvoaXEi5vp-IJwiioVumOXqKjwtdwOi5z&usqp=CAU">
         <br>
           <div id="right_name" class="user_name">
           ${data.name}
