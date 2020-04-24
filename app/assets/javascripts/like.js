@@ -112,7 +112,7 @@ $(function () {
   </div >
   </div >
     <div id="right-bg">
-      <img id="right-avatar" class="user_avatar" src="名無し.png">
+      <img id="right-avatar" class="user_avatar" src="images/名無し.png">
         <br>
           <div id="right_name" class="user_name">
           ${data.name}
