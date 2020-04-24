@@ -1,20 +1,3 @@
-$(function () {
-  $('.hidden_btn').on('click', function () {
-    $('.hidden_image').fadeIn(5000);
-  })
-})
-
-$(function () {
-  $('.follows').on('click', function () {
-    $('')
-  })
-})
-
-
-
-
-
-
 /*global jQuery */
 /*!
 * Lettering.JS 0.7.0
@@ -42,7 +25,6 @@ $(function () {
 
     }
   }
-
 
   var methods = {
     init: function () {

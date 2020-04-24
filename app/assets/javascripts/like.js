@@ -97,12 +97,10 @@ $(function () {
           ${data.name}
           </div>
   </div>
-        <img id="wreath" src="">
   </div>
   </div>
-      <div id="christmas_message" class="ef">
+      <div id="matching_message" class="ef">
         matching
-
   </div>
   `
 
@@ -138,9 +136,9 @@ $(function () {
     }
   }
   // matchingmessageに変更
-  var christmasMessage = function () {
+  var matchingMessage = function () {
 
-    $('#christmas_message').css('opacity', '1');
+    $('#matching_message').css('opacity', '1');
 
     $('.ef').textillate({
 
@@ -203,11 +201,6 @@ $(function () {
 
   }
 
-  // 花が回る
-  var animateWreath = function () {
-    $('#wreath').animate({ opacity: '1' }, 3000);
-  }
-
   var snowEffect = function () {
     $(document).snowfall({
       minSize: 4,    // 雪の最小サイズ
@@ -240,7 +233,7 @@ $(function () {
       .done(function (data) {
         $('body').html("");
         $('body').html(buildHTML(data));
-        matchingEffect(animateWreath, christmasMessage, startBurst, snowEffect);
+        matchingEffect(matchingMessage, startBurst, snowEffect);
         setTimeout(doReload, 13000);
       })
       .fail(function () {
