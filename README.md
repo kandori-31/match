@@ -20,14 +20,14 @@ https://matchap.herokuapp.com/
 <br>
 男性用テストアカウント
 <br>
-email: dansei@gmail.com
+email: male@gmail.com
 <br>
 password: testtest
 <br>
 
 女性用テストアカウント
 <br>
-email: jyosei@gmail.com
+email: femail@gmail.com
 <br>
 password: testtest
 

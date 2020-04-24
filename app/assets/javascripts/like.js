@@ -75,7 +75,6 @@ $(function () {
     setTimeout(function () {
       burstEffect();
     }, 2000);
-
   }
 
   function buildHTML(data) {
@@ -86,8 +85,6 @@ $(function () {
   <img id="left-avatar" class="user_avatar"src=${data.cu_image}>
   <div id="left_name" class="user_name">
   ${data.cu_name}
-  
-
   </div >
   </div >
     <div id="right-bg">
@@ -103,7 +100,6 @@ $(function () {
         matching
   </div>
   `
-
       return html
     }
     else {
@@ -113,12 +109,10 @@ $(function () {
   <img id="left-avatar" class="user_avatar"src=${data.cu_image}>
   <div id="left_name" class="user_name">
   ${data.cu_name}
-  
-
   </div >
   </div >
     <div id="right-bg">
-      <img id="right-avatar" class="user_avatar" src="https://lh3.googleusercontent.com/proxy/GliKELLnoWMjSZpD2XHnsxL2v0jEtMVJX3PG-M1nvmSztSqdmKb-RXuPAMgupB3phiZ9V48lWCGeCdYzSaQ6mj_h2oTyRUCq9_sfTEQ6HeDk43xGS5w0e_b7904RNOE8ZcrPMefSWIXE8BM6iTewiK9-pUkQyVOry6DMt5Nxnw">
+      <img id="right-avatar" class="user_avatar" src="名無し.png">
         <br>
           <div id="right_name" class="user_name">
           ${data.name}
