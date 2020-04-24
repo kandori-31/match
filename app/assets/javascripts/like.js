@@ -121,7 +121,7 @@ $(function () {
         <img id="wreath" src="">
   </div>
   </div>
-      <div id="christmas_message" class="ef">
+      <div id="matching_message" class="ef">
         matching
 
   </div>
