@@ -59,11 +59,11 @@ http://localhost:3000
 <br>
   ユーザーの詳細ページです
   <br>
-  このページでいいねをすることができ、マッチングした際にはメッセージに飛ぶことができます
+  このページでいいねをすることができ、マッチング後はメッセージを送ることができます
   <br>
 
 ### マッチング演出
-[![Image from Gyazo](https://i.gyazo.com/00fcc28ec9ef522115e6c5e6567d70e0.gif)](https://gyazo.com/00fcc28ec9ef522115e6c5e6567d70e0)
+[![Image from Gyazo](https://i.gyazo.com/aa7692d6c62a7c279e06ac100f133d58.gif)](https://gyazo.com/aa7692d6c62a7c279e06ac100f133d58)
 <br>
   mo.jsのburstで花火をあげ、boundで要素を弾ませています
 
