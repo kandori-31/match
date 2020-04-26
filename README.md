@@ -64,6 +64,7 @@ http://localhost:3000
 
 ### マッチング演出
 [![Image from Gyazo](https://i.gyazo.com/1d59c56fe9518ffd0a5c4c94a42fbc42.gif)](https://gyazo.com/1d59c56fe9518ffd0a5c4c94a42fbc42)
+![マッチング演出](https://user-images.githubusercontent.com/61687923/80306401-0c897780-87fe-11ea-9627-123b6abdb794.gif)
 <br>
   mo.jsのburstで花火をあげ、boundで要素を弾ませています
 
