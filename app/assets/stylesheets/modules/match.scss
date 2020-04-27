@@ -30,35 +30,35 @@
 }
 
 .user_avatar {
-width: 250px;
-height: 250px;
-border-radius: 50%;
-position: absolute;
-top:30%;
-left:30%;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: absolute;
+  top:30%;
+  left:30%;
 }
 
 #right-avatar{
-margin-right: 150px;
+  margin-right: 150px;
 }
 
 .user_name {
-color: white;
-font-size: 30px;
-padding: 15px;
-position: absolute;
-top:60%;
-left:33%;
+  color: white;
+  font-size: 30px;
+  padding: 15px;
+  position: absolute;
+  top:60%;
+  left:33%;
 }
 
 #matching_message {
-opacity: 0;
-position: absolute;
-top: 10px;
-left: 23%;
-color: #ffffe0;
-text-shadow: 0 0 10px #fff,0 0 15px #fff;
-padding: 50px;
-font-size: 85px;
-font-family: cursive;
+  opacity: 0;
+  position: absolute;
+  top: 10px;
+  left: 23%;
+  color: #ffffe0;
+  text-shadow: 0 0 10px #fff,0 0 15px #fff;
+  padding: 50px;
+  font-size: 85px;
+  font-family: cursive;
 }
