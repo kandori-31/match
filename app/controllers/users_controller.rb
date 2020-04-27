@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
   def index
-    @users=User.all
+    @users=User.where.not(gender: current_user.gender)
   end
 
   def follower
-    @users=current_user.followers
+    @users = current_user.followers
   end
+
   def edit
   end
 
@@ -13,8 +14,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @relationship = Relationship.new
     @currentUserEntry = GroupUser.where(user_id: current_user.id)
-    @userEntry = GroupUser.where(user_id: @user.id
-    )
+    @userEntry = GroupUser.where(user_id: @user.id)
     unless @user.id == current_user.id
     @currentUserEntry.each do |cu|
       @userEntry.each do |u|

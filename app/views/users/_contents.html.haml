@@ -1,14 +1,14 @@
 .contents
   - @users.each do |user|
-    -if current_user.gender != user.gender && user.image.present?
+    - if user.image.present?
       .user
         .user__image
-          =image_tag(user.image, class:"icon-image")
+          = link_to image_tag(user.image, class:"icon-image"),user_path(user.id)
         .user__name
-          =link_to user.name,"/users/#{user.id}", method: :get
-    -elsif current_user.gender != user.gender
+          = user.name
+    - else
       .user
         .user__image
-          =image_tag("名無し.png", class:"icon-image")
+          = link_to image_tag("名無し.png", class:"icon-image"),user_path(user.id)
         .user__name
-          =link_to user.name,"/users/#{user.id}", method: :get
+          = user.name

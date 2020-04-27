@@ -2,12 +2,12 @@
   .header
     .header__logo
       .header__logo__app 
-        =link_to "MatchApp", root_path
+        = link_to "MatchApp", root_path
       .header__logo__image
         -if current_user.image.present?
-          =link_to image_tag(current_user.image, class:"icon-image"),"/users/#{current_user.id}", method: :get
+          = link_to image_tag(current_user.image, class:"icon-image"), user_path(current_user.id)
         -else
-          =link_to image_tag("名無し.png",class:"icon-image"),"/users/#{current_user.id}",method: :get
+          =link_to image_tag("名無し.png",class:"icon-image"), user_path(current_user.id)
 
     %ul.header__list
       %li
