@@ -121,7 +121,7 @@ http://localhost:3000
 |Column|Type|Options|
 |------|----|-------|
 |group_id|references|null: false,foreign_key: true|
-|user_id|refernces|null:false, foreign_key: true|
+|user_id|references|null:false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
@@ -129,7 +129,7 @@ http://localhost:3000
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|content|strng|null:false, foreign_key: true|
+|content|strng|null:false|
 |group_id|references|null:false, foreign_key: true|
 |user_id|references|null:false, foreign_key: true|
 ### Association
