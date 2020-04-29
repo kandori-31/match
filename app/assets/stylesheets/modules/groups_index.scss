@@ -1,0 +1,37 @@
+.message-contents{
+  padding-top:80px;
+  height: 100vh;
+  background: radial-gradient(#eeffff, white);
+}
+  .message-list{
+    display: flex;
+    margin-top:10px;
+    padding:5px;
+    position: relative;
+    &__content{
+      margin-left:5%;
+      position: relative;
+      width:100%;
+      &__name{
+        position: absolute;
+        top:5%;
+      }
+      &__text{
+        position: absolute;
+        bottom:5%;
+      }
+    }
+    &__image{
+      &__icon{
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        object-fit: cover;
+      }
+    }
+    &__time{
+      position: absolute;
+      right:5%;
+
+    }
+}
