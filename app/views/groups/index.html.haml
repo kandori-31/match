@@ -3,10 +3,11 @@
   .message-contents
     - @groups.each do |group|
       .message-list
+        =link_to "" ,group_path(group.id)
         .message-list__image
           - group.users.each do |user|
             - if current_user.id != user.id
-              = image_tag(user.image, class: "message-list__image__icon")
+              =  image_tag(user.image, class: "message-list__image__icon")
         .message-list__content
           .message-list__content__name
             - group.users.each do |user|
@@ -14,7 +15,7 @@
                 = user.name
           .message-list__content__text
             - if group.messages.present?
-              = group.messages.find_by(id: group.messages.last.id).content
+              = group.messages.find_by(id: group.messages.last.id).content.truncate(20)
             - else 
               まだメッセージはありません
         - if group.messages.present?
