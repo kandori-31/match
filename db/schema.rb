@@ -12,11 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20200319084226) do
 
-  create_table "goods", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "id"
-    t.string  "name"
-  end
-
   create_table "group_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "group_id"
     t.integer  "user_id"
@@ -27,7 +22,7 @@ ActiveRecord::Schema.define(version: 20200319084226) do
   end
 
   create_table "groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",       null: false
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

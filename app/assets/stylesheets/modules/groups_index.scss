@@ -1,0 +1,49 @@
+.message-contents{
+  padding-top:80px;
+  height: 100vh;
+  background: radial-gradient(#eeffff, white);
+}
+  .message-list{
+    display: flex;
+    margin-top:10px;
+    padding:5px;
+    position: relative;
+    border-bottom:1px solid gray;
+    a{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height:100%;
+      width: 100%;
+      z-index:1;
+    }
+    &__content{
+      margin-left:5%;
+      position: relative;
+      width:70%;
+      font-size:20px;
+      &__name{
+        position: absolute;
+        top:5%;
+        color:gray;
+      }
+      &__text{
+        position: absolute;
+        bottom:5%;
+        word-break: break-all;
+      }
+    }
+    &__image{
+      &__icon{
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        object-fit: cover;
+      }
+    }
+    &__time{
+      position: absolute;
+      right:5%;
+
+    }
+}
