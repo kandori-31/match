@@ -20,6 +20,6 @@
             =m.content 
 = form_for @message do |f|
   .form
-    = f.text_field :content, placeholder: "type a message",class:"form__text"
+    = f.text_field :content, placeholder: "type a message",class:"form__text",required: true
     = f.hidden_field :group_id, value: @group.id
     = f.submit "送信",class: "form__submit"
